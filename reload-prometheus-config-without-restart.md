@@ -1,5 +1,5 @@
 ### Find out the `process id`
 ```
 >> ps aux | grep prometheus
->> kill -HUP <pid>
+>> sudo kill -HUP <pid>
 ```
