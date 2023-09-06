@@ -1,7 +1,7 @@
 ### Recording Rules
 - https://training.promlabs.com/training/recording-rules/recording-rules-overview/rule-naming-conventions
 - https://training.promlabs.com/training/recording-rules/recording-rules-overview/configuring-recording-rules
-- 
+ 
 ```
 level: metric: operations
 
