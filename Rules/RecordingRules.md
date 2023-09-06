@@ -2,7 +2,7 @@
 - https://training.promlabs.com/training/recording-rules/recording-rules-overview/rule-naming-conventions
 - https://training.promlabs.com/training/recording-rules/recording-rules-overview/configuring-recording-rules
  
-```
+```bash
 level: metric: operations
 
 for:  sum by(job, path) (rate(http_requests_total{job="my-job"}[5m]))
@@ -10,7 +10,7 @@ naming: path:http_requests:rate5m
 ```
 
 ### Recording Rule:
-```
+```yaml
 groups:
   - name: node_rules
     interval: 10s
@@ -29,7 +29,7 @@ groups:
 ```
 
 ### Syntax Checking using `promtool`
-```
+```bash
 promtool check rules /path/to/example.rules.yml
 ```
 -  Store the rule inside the `/etc/prometheus/rules/` directory. Example: `/etc/prometheus/rules/node_rules.yaml`
