@@ -28,6 +28,10 @@ groups:
         expr: 100 - 100 * (node_filesystem_free_bytes{mountpoint="/"} / node_filesystem_size_bytes{mountpoint="/"})
 ```
 
+### Syntax Checking using `promtool`
+```
+promtool check rules /path/to/example.rules.yml
+```
 -  Store the rule inside the `/etc/prometheus/rules/` directory. Example: `/etc/prometheus/rules/node_rules.yaml`
 -  Load the rule file inside the `prometheus.yaml`. In my case file is located at `/etc/prometheus/prometheus.yaml`
   
