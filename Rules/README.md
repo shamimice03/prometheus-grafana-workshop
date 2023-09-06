@@ -14,6 +14,3 @@
 - `Execution`: Alerting rules are continuously evaluated by Prometheus, and when a rule's condition is met, an alert is generated and can be sent to alerting systems like Alertmanager for notification.
 
 In summary, Recording Rules are for transforming and aggregating metrics for query optimization, while Alerting Rules are for defining conditions to trigger alerts when specific criteria are met, enabling you to proactively respond to issues in your monitored systems.
-
-
-Convert it to markdown language 
