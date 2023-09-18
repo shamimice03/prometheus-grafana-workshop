@@ -1,0 +1,31 @@
+global:
+    smtp_from: 'mrseeker420@gmail.com'
+    smtp_smarthost: 'smtp.gmail.com:465'
+    smtp_auth_username: 'mrseeker420@gmail.com'
+    smtp_auth_password: 'qmgqfghqjngoqpme'
+    smtp_require_tls: false
+route:
+  #  group_by: ['alertname']
+  #  group_wait: 30s
+  #  group_interval: 5m
+  #  repeat_interval: 1h
+  receiver: 'all'
+  routes:
+    - receiver: 'server_team'
+      matchers:
+        - severity="critical"
+        - category="server"
+    - receiver: 'storage_team'
+      matchers:
+        - severity=~ "warning|critical"
+        - category="disk"
+receivers:
+  - name: 'all'
+    email_configs:
+      - to: 'shamimice03@gmail.com' 
+  - name: 'server_team'
+    email_configs:
+      - to: 'shamimice3@gmail.com' 
+  - name: 'storage_team'
+    email_configs:
+      - to: 'shamimice4@gmail.com' 
