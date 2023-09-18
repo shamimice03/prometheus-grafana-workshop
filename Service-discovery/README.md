@@ -62,3 +62,12 @@ if requirement meets `keep` or `drop`
 ```
 ![Alt text](<Screenshot 2023-09-18 at 22.14.34.png>)
 
+### Add new label 
+```yaml
+      - source_labels: [__meta_ec2_tag_Env, __meta_ec2_tag_Name]
+        separator: "@"
+        regex: "(.*)@(.*)"
+        replacement: "${1}/${2}_test_label"
+        target_label: test_label
+        action: replace
+```
