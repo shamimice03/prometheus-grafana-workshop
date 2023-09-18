@@ -37,7 +37,7 @@ Docs on:
       - source_labels: [__meta_ec2_tag_Name, __meta_ec2_private_ip]
         target_label: instance
 ```
-![Alt text](<Screenshot 2023-09-18 at 21.35.49-1.png>)
+![Alt text](<Screenshot 2023-09-18 at 21.43.15.png>)
 
 ### `keep` and `drop`
 if requirement meets `keep` or `drop`
