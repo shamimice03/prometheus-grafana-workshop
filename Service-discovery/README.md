@@ -27,6 +27,12 @@ Docs on:
         target_label: __address__
       - source_labels: [__meta_ec2_tag_Env]
         target_label: test
+      - source_labels: [__meta_ec2_tag_Env, __meta_ec2_tag_Name]
+        separator: "@"
+        regex: "(.*)@(.*)"
+        replacement: "${1}/${2}_test_label"
+        target_label: test_label
+        action: replace
 ```
 ### Before adding `relabel_configs`:
 ![Alt text](<Screenshot 2023-09-18 at 21.35.49.png>)
