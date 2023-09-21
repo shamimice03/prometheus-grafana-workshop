@@ -7,6 +7,9 @@ sudo yum update -y
 # Upgrade the system to the latest available packages
 sudo yum upgrade -y
 
+# Install wget
+sudo yum install wget -y 
+
 # Create a system group and user for Prometheus with /sbin/nologin shell
 sudo groupadd --system prometheus
 sudo useradd -s /sbin/nologin --system -g prometheus prometheus
